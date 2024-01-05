@@ -6,7 +6,7 @@ object MolcarData {
     val molcarList = listOf<Molcar>(
         Molcar("포테토",
             R.drawable.molcar_potato,"느긋한 성격이지만 종종 운전자의 조종을 무시할 때가 있으며 도움이 필요한 이에게 거리낌 없기도 하다. 당근을 제일 좋아한다.",1),
-        Molcar("시로모", R.drawable.molcar_siromo, "겁이 많은 모루카 중에서도 특히 겁이 많다.\n마음씨 좋은 운전자에게 응석을 부리기도 하지만 여러 트러블에 휘말려 들 때기 많다.\n테디를 누님처럼 따르고 있다.\n제일 좋아하는것은 양상추다.",1),
+        Molcar("시로모", R.drawable.molcar_siromo, "겁이 많은 모루카 중에서도 특히 겁이 많다.\n마음씨 좋은 운전자에게 응석을 부리기도 하지만 여러 트러블에 휘말려 들 때가 많다.\n테디를 누님처럼 따르고 있다.\n제일 좋아하는것은 양상추다.",1),
         Molcar("좀비 시로모", R.drawable.zombie_siromo , "좀비에게 물려 감염되어 버린 시로모다.\n주식은 고기다.",1),
         Molcar( "테디", R.drawable.molcar_teddy,   "무엇이든 잘 먹고 잘 움직인다.\n말괄량이에 겁이 없다.\n엉뚱한 행동을 하는 말썽꾸러기라서 주위의 걱정을 사고있다.\n모티브는 털이 곱슬곱슬한 테디 기니피그이다.",1),
         Molcar( "아비", R.drawable.molcar_abi,   "성실하고 호기심이 왕성하다.\n초보자 운전 마크를 달고 있지만 언젠가 초보 운전을 졸업하기를 꿈꾸고 있다.\n고양이를 싫어한다.",1),

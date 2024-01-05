@@ -30,6 +30,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
@@ -81,13 +82,13 @@ fun MolcarApp() {
 @Preview(showBackground = true)
 fun RecyclerViewContent() {
     val molcar = remember { MolcarData.molcarList }
+    val scrollState = rememberLazyListState()
     LazyColumn(
+        state = scrollState,
         contentPadding = PaddingValues(20.dp, 20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
-            .background(
-                Color.White
-            )
+            .background(Color.White)
             .fillMaxSize())
     {
         items(
@@ -118,10 +119,7 @@ fun RecyclerItem(molcar: Molcar) {
                     .padding(8.dp)
                     .fillMaxSize()
                     .animateContentSize()
-                    .clickable(
-                        interactionSource = MutableInteractionSource(),
-                        indication = null
-                    ) {
+                    .clickable(interactionSource = MutableInteractionSource(), indication = null) {
                         expanded = !expanded
                         default = !default
                     }) {
@@ -150,10 +148,7 @@ fun RecyclerItem(molcar: Molcar) {
             exit = scaleOut() + shrinkVertically(shrinkTowards = Alignment.CenterVertically) + fadeOut(targetAlpha = 0f)) {
             Row(modifier = Modifier
                 .animateContentSize()
-                .clickable(
-                    interactionSource = MutableInteractionSource(),
-                    indication = null
-                ) {
+                .clickable(interactionSource = MutableInteractionSource(), indication = null) {
                     expanded = !expanded
                     default = !default
                 }
